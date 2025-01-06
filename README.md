@@ -30,5 +30,5 @@ Instructions on how to use them in your own application are linked below.
 
 | Inquirer | fs | figlet |
 
-Testado no bash do Windows ( cmd ), então tente utilizar o mesmo.
+Testado no bash do Windows ( cmd ou PowerShell ), então tente utilizar o mesmo.
 =]
