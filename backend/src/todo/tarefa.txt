@@ -1,0 +1,56 @@
+Enunciado - Desafio de Programação - 2025/1
+===================================
+Gerenciamento de Produtos para a Loja AgilStore
+
+A AgilStore é uma pequena loja de eletrônicos que recentemente expandiu seu catálogo de produtos para incluir uma variedade maior de itens, desde smartphones e laptops até acessórios como cabos, carregadores e fones de ouvido. Com o aumento do número de produtos e a diversidade das categorias, a equipe de gerenciamento percebeu a necessidade de otimizar o controle do inventário para garantir que os produtos estejam sempre disponíveis para os clientes e que os níveis de estoque sejam mantidos de forma eficiente.
+Atualmente, o controle de inventário está sendo feito manualmente em planilhas, o que tem se mostrado ineficiente e propenso a erros, especialmente quando se trata de atualizações rápidas ou buscas específicas. Para resolver esse problema, a loja decidiu desenvolver uma aplicação que permita a gestão automatizada do inventário de produtos, facilitando operações como adicionar novos produtos, listar produtos existentes, atualizar informações e remover itens obsoletos.
+
+Requisitos Funcionais:
+Adicionar Produto: Permitir que o usuário adicione um novo produto ao inventário.
+Solicitar ao usuário a inserção dos seguintes dados:
+Nome do Produto 
+Categoria 
+Quantidade em Estoque 
+Preço 
+Gerar um id único para cada produto automaticamente.
+
+
+
+Listar Produtos: Exibir todos os produtos cadastrados no inventário.
+ 			Mostrar uma tabela com as seguintes colunas:
+ID
+Nome do Produto
+Categoria
+Quantidade em Estoque
+Preço
+Permitir opções de filtragem por categoria ou ordenação por nome, quantidade ou preço (opcional).
+
+Atualizar Produto: Atualizar as informações de um produto existente identificado pelo seu id.
+Verificar se o id informado existe no inventário.
+Solicitar ao usuário quais campos deseja atualizar (Nome, Categoria, Quantidade, Preço).
+Validar os novos dados antes de salvar as alterações.
+
+Excluir Produto: Remover um produto do inventário pelo seu id.
+Verificar se o id informado existe no inventário.
+Confirmar a ação com o usuário antes de excluir (opcional).
+Remover o produto do inventário após a confirmação.
+
+Buscar Produto: Buscar e exibir detalhes de um produto específico pelo id ou pelo nome.
+Permitir a busca por id ou por parte do nome do produto.
+Exibir todas as informações detalhadas do produto encontrado.
+Exibir mensagem apropriada se nenhum produto for encontrado.
+
+
+
+
+Requisitos Extras (Opcional):
+Persistência de Dados:
+Implementar salvamento automático dos dados em um arquivo JSON para que os produtos não sejam perdidos ao encerrar a aplicação.
+
+Tecnologias e Ferramentas:
+A aplicação pode ser feita em Python, Node.js ou Java.
+As interações podem ser realizadas através de comandos no terminal.
+Entrega:
+Disponibilize o código-fonte em um repositório no GitHub.
+Inclua um README com instruções de como rodar a aplicação localmente e tecnologias utilizadas.
+

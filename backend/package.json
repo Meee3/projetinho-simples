@@ -1,0 +1,30 @@
+{
+  "name": "projeto-simples",
+  "version": "1.0.0",
+  "description": "interatividade com cli",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meee3/projetinho-simples.git"
+  },
+  "author": "Tiago L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meee3/projetinho-simples/issues"
+  },
+  "homepage": "https://github.com/Meee3/projetinho-simples#readme",
+  "dependencies": {
+    "figlet": "^1.8.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^12.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
