@@ -25,10 +25,12 @@ npm install
 
 ## Dependências
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
-
 | Inquirer | fs | figlet |
 
-Testado no bash do Windows ( cmd ou PowerShell ), então tente utilizar o mesmo.
+Resumão das dependências, 
+Inquirer para o prompt
+fs = filesystem, brincar com Json
+figlet = ASCII Art
+
+Testado no bash do Windows ( cmd ou PowerShell ), então tente utilizar eles.
 =]
