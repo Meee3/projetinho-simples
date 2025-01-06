@@ -1,36 +1,8 @@
 import inquirer from "inquirer";
 import fs from "fs";
 import figlet from "figlet";
+import produtos from "../Models/Produtos.js";
 
-function first() {
-  inquirer
-    .prompt([
-      {
-        name: "fileName",
-        message: "Qual o nome do arquivo?",
-      },
-    ])
-    .then((answers) => {
-      fs.writeFileSync(answers.fileName + ".json", "Conteudo do arquivo");
-    });
-}
-function adicionarProduto() {
-  return "Adicionado com Sucesso!";
-}
-
-function listarProduto() {
-  return "Listado com Sucesso!";
-}
-
-function atualizarProduto() {
-  return "Atualizado com Sucesso!";
-}
-function excluirProduto() {
-  return "Excluido com Sucesso!";
-}
-function buscarProduto() {
-  return "Buscado com Sucesso!";
-}
 function chamarMenu() {
   inquirer
     .prompt([
@@ -50,36 +22,39 @@ function chamarMenu() {
     ])
     .then((answers) => {
       switch (answers.menu) {
-        case "Cadastrar Produto":
-          console.log("Cadastrar Produto");
+        case "Adicionar Produto":
+          produtos.adicionarProduto();
           break;
-        case "Cadastrar Cliente":
-          console.log("Cadastrar Cliente");
+        case "Listar Produto":
+          produtos.listarProduto();
           break;
-        case "Cadastrar Fornecedor":
-          console.log("Cadastrar Fornecedor");
+        case "Atualizar Produto":
+          console.log("Atualizar Produto");
+          produtos.atualizarProduto();
           break;
-        case "Cadastrar Funcionario":
-          console.log("Cadastrar Funcionario");
+        case "Excluir Produto":
+          console.log("Excluir Produto");
+          produtos.excluirProduto();
           break;
-        case "Cadastrar Venda":
-          console.log("Cadastrar Venda");
+        case "Buscar Produto":
+          console.log("Buscar Produto");
+          produtos.buscarProduto();
           break;
         case "Sair":
-          cmd.exit;
+          console.log("Tenha um excelente dia!");
+          process.exit(0);
+          break;
       }
     });
 }
 
 function criarJSON() {
-  const filePath = "./src/assets/db/produtos.json";
+  const filePath = "./src/db/produtos.json";
 
   if (!fs.existsSync(filePath)) {
-    // Create the directory structure first
-    fs.mkdirSync("./src/assets/db", { recursive: true });
-    // Then create the file
+    fs.mkdirSync("./src/db", { recursive: true });
     fs.writeFileSync(filePath, "{}");
-    console.log("Arquivo JSON criado com sucesso!");
+    // console.log("Arquivo JSON criado com sucesso!");
   } else {
     // console.log("Arquivo já existe");
   }
@@ -100,4 +75,4 @@ function apresentacaoEmpresa() {
   }, 2000);
 }
 
-export default { first, apresentacaoEmpresa, criarJSON, chamarMenu };
+export default { apresentacaoEmpresa, criarJSON, chamarMenu };
